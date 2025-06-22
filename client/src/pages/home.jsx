@@ -22,12 +22,14 @@ function Home() {
   };
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-4 fade-scale">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 w-full max-w-6xl mx-auto fade-scale">
       {products.length === 0 ? (
-        <p className="text-center col-span-full text-lime-300">No products added yet.</p>
+        <p className="text-center col-span-full text-lime-400">No products added yet.</p>
       ) : (
         products.map((product) => (
-          <ProductCard key={product._id} product={product} onDelete={handleDelete} />
+          <div key={product._id} className="h-full">
+            <ProductCard product={product} onDelete={handleDelete} />
+          </div>
         ))
       )}
     </div>

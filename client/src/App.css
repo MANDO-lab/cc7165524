@@ -1,9 +1,7 @@
 @import "tailwindcss";
 
-/* Global Reset */
 html, body {
   height: 100%;
-  width: 100%;
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -16,15 +14,13 @@ html, body {
   color: #f1f5f9;
 }
 
-/* App container */
 #root {
   min-height: 100%;
   display: flex;
   flex-direction: column;
 }
 
-/* Futuristic Text */
-h1, h2, h3 {
+h1, h2 {
   background: linear-gradient(90deg, #84cc16, #4ade80, #22d3ee);
   background-clip: text;
   -webkit-background-clip: text;
@@ -32,22 +28,19 @@ h1, h2, h3 {
   text-shadow: 0 0 5px #84cc16aa;
 }
 
-/* Card Hover Animation */
 .card-hover {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(14px);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
   transition: all 0.4s ease-in-out;
   transform: scale(1);
   border-radius: 1rem;
-  overflow: hidden;
 }
 .card-hover:hover {
   transform: scale(1.05) rotateX(1deg);
   box-shadow: 0 0 15px #84cc16, 0 0 30px #4ade80;
 }
 
-/* Form and Buttons */
 input, textarea {
   background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid #84cc16;
@@ -60,7 +53,6 @@ input:focus {
   box-shadow: 0 0 10px #4ade80;
 }
 
-/* Futuristic Buttons */
 .button-glow {
   background-color: #2563eb;
   color: #d9f99d;
@@ -75,7 +67,6 @@ input:focus {
   box-shadow: 0 0 15px #3b82f6, 0 0 25px #60a5fa;
 }
 
-/* Form Container */
 .glass {
   background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(20px);
@@ -83,7 +74,6 @@ input:focus {
   border-radius: 1.5rem;
 }
 
-/* Fade-in Effect */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
@@ -92,7 +82,6 @@ input:focus {
   animation: fadeIn 0.6s ease-in-out both;
 }
 
-/* Zoom Effect */
 @keyframes zoomIn {
   from { opacity: 0; transform: scale(0.9); }
   to { opacity: 1; transform: scale(1); }
