@@ -14,7 +14,7 @@ function AddProduct() {
   };
 
   return (
-    <div>
+    <div className="fade-in">
       <ProductForm onAdd={handleAdd} />
     </div>
   );
