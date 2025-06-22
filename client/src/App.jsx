@@ -7,19 +7,19 @@ import EditProduct from "./components/EditProduct";
 function App() {
   return (
     <Router>
-      <div className="min-h-screen flex flex-col bg-white text-gray-800">
-        <nav className="w-full bg-lime-100 shadow">
+      <div className="min-h-screen flex flex-col">
+        <nav className="w-full glass shadow-md text-white">
           <div className="max-w-5xl mx-auto flex justify-between items-center px-6 py-4">
-            <h1 className="text-2xl font-bold text-lime-600">MARKET PLACE</h1>
+            <h1 className="text-3xl font-bold glow">MARKET PLACE</h1>
             <div className="space-x-6">
-              <Link to="/" className="text-lime-600 hover:text-lime-500 font-medium">Home</Link>
-              <Link to="/add" className="text-lime-600 hover:text-lime-500 font-medium">Add Product</Link>
+              <Link to="/" className="hover:underline hover:text-lime-400 transition duration-200">Home</Link>
+              <Link to="/add" className="hover:underline hover:text-lime-400 transition duration-200">Add Product</Link>
             </div>
           </div>
         </nav>
 
         <main className="flex-1 flex justify-center items-start">
-          <div className="w-full max-w-5xl bg-white rounded-lg shadow p-8 mt-8">
+          <div className="w-full max-w-5xl rounded-lg p-8 mt-8 fade-scale">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/add" element={<AddProduct />} />
