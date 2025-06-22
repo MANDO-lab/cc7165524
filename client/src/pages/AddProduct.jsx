@@ -5,7 +5,7 @@ function AddProduct() {
   const navigate = useNavigate();
 
   const handleAdd = async (product) => {
-    await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/products`, {
+    await fetch('http://localhost:5000/api/products', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(product),
@@ -14,7 +14,7 @@ function AddProduct() {
   };
 
   return (
-    <div className="fade-in">
+    <div>
       <ProductForm onAdd={handleAdd} />
     </div>
   );
